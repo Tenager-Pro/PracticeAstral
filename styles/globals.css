@@ -1,0 +1,101 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.List{
+  color:aqua;
+}
+
+.LoadBTNWrapper{
+  color:blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.LoadBTN{
+  color: #FFFFFF;
+  background: #1971c8;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.LoadBTN:hover{
+  background: #124a83;
+  cursor: pointer;
+}
+
+.LoadBTN:active {
+  background: #0b2f52;
+}
+
+
+.CardImage{
+  
+  width: 100%;
+  height: 110px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+ 
+}
+
+.CardDate{
+  margin-bottom: 20px;
+}
+
+.CardBody{
+  padding: 10px;
+}
+
+.CardWrapper{
+  width: 210px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0px 2px 2px rgb(155, 150, 150);
+}
+
+.Like{
+  margin-left: 7px;
+  margin-bottom: 7px;
+}
+
+.Like:hover{
+  cursor: pointer;
+  fill: rgb(105, 39, 39);
+}
+
+.hiddenBox{
+  position: absolute;
+  margin-left: 10px;
+  opacity: 0;
+}
+
+.hiddenBox:hover{
+  cursor: pointer;
+}
+
+.hiddenBox:hover~svg{
+  fill: rgb(105, 39, 39);
+}
+
+.hiddenBox:checked~svg{
+  fill:red;
+}
+
+.CardsWrapper{
+  margin-left: auto;
+  margin-right: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  max-width: 600px;
+  padding: 10px;
+}
