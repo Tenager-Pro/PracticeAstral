@@ -11,8 +11,8 @@ body {
 }
 
 .LoadBTNWrapper{
-  color:blueviolet;
-  display: flex;
+  
+display: flex;
   justify-content: center;
   align-items: center;
   -moz-user-select: none;
@@ -54,7 +54,7 @@ body {
   padding: 10px;
 }
 
-.CardWrapper{
+.Card{
   width: 210px;
   border-radius: 6px;
   font-weight: bold;

@@ -1,11 +1,11 @@
 const Card1 = () => {
     return(
-            <div className="CardWrapper">
-            <img className="CardImage" src="/Image.jpg"/>
+            <div className="Card">
+            <img className="CardImage" src="/images/Image.jpg"/>
             <div className="CardBody">
                 Дата добавления:
                 <div className="CardDate">
-                    11 октября 2022 года
+                    12 октября 2022 года
                 </div>
             </div>
             <input className="hiddenBox" type="checkbox" id="button"/>
