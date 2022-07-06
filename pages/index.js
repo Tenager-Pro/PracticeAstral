@@ -1,18 +1,18 @@
-import Content from "../components/list"
+import List from "../components/list"
 import ButtonLoad from "../components/buttonLoad"
-import Card1 from "../components/cards/card1"
+import CardTemplate from "../components/cards/cardTemplate"
 
 export default function Home(){
   return(
     <div>
       <div className="CardsWrapper">
-        <Card1/>
-        <Card1/>
-        <Card1/>
-        <Card1/>
-        <Card1/>
-        <Card1/>
-        <Card1/>
+        <CardTemplate/>
+        <CardTemplate/>
+        <CardTemplate/>
+        <CardTemplate/>
+        <CardTemplate/>
+        <CardTemplate/>
+ 
       </div>
       <ButtonLoad/>
     </div>

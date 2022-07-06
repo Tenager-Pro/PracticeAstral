@@ -1,11 +1,11 @@
-const Card1 = () => {
+const CardTemplate = () => {
     return(
-            <div className="Card">
-            <img className="CardImage" src="/images/Image.jpg"/>
+        <div className="Card">
+            <img className="CardImage" src="../images/Image.jpg"/>
             <div className="CardBody">
                 Дата добавления:
                 <div className="CardDate">
-                    12 октября 2022 года
+                    22 Мая 2012 года
                 </div>
             </div>
             <input className="hiddenBox" type="checkbox" id="button"/>
@@ -16,4 +16,4 @@ const Card1 = () => {
     )
 }
 
-export default Card1;
+export default CardTemplate;
