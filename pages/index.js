@@ -1,4 +1,4 @@
-import CardTemplate from "../components/cards/cardTemplate"
+import CardTemplate from "../components/cardTemplate"
 import ButtonLoad from "../components/buttonLoad"
 export default function Main(){
   return(
