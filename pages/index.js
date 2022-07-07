@@ -4,7 +4,6 @@ export default function Main(){
   return(
 
     <div>
-    
       <div className="CardsWrapper">
         <CardTemplate/>
         <CardTemplate/>
@@ -12,7 +11,7 @@ export default function Main(){
         <CardTemplate/>
         <CardTemplate/>
         <CardTemplate/>
- 
+
       </div>
       <ButtonLoad/>
     </div>

@@ -1,9 +1,12 @@
-const ButtonLoad = () =>{
+const ButtonLoad =()=>{
     return (
-        <div className="LoadBTNWrapper">
-            <div className="LoadBTN">
+       
+       <div className="LoadButtonWrapper">
+            <div className="LoadButton">
                 ЗАГРУЗИТЬ ЕЩЕ
+           
             </div>
+            
         </div>
     )
 }

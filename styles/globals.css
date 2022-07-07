@@ -11,6 +11,8 @@ body {
 }
 
 
+
+
 .CardsWrapper{
   margin-left: auto;
   margin-right: auto;
@@ -41,6 +43,7 @@ body {
   margin-bottom: 20px;
 }
 
+
 .CardBody{
   padding: 10px;
 }
@@ -55,34 +58,34 @@ body {
   fill: rgb(105, 39, 39);
 }
 
+
 .hiddenBox{
   position: absolute;
   margin-left: 10px;
   opacity: 0;
 }
 
+
+
 .hiddenBox:hover{
   cursor: pointer;
 }
-
 .hiddenBox:hover~svg{
   fill: rgb(105, 39, 39);
 }
-
 .hiddenBox:checked~svg{
   fill:red;
 }
-
-.LoadBTNWrapper{ 
+.LoadButtonWrapper{ 
   display: flex;
   justify-content: center;
-  align-items: center;
   -moz-user-select: none;
-  -webkit-user-select: none;
   user-select: none;
+  -webkit-user-select: none;
+  align-items: center;
+ 
 }
-
-.LoadBTN{
+.LoadButton{
   margin-top: 10px;
   margin-bottom: 10px;
   color: #FFFFFF;
@@ -91,11 +94,13 @@ body {
   border-radius: 10px;
 }
 
-.LoadBTN:hover{
+
+
+.LoadButton:hover{
   background: #124a83;
   cursor: pointer;
 }
 
-.LoadBTN:active {
+.LoadButton:active {
   background: #0b2f52;
 }
