@@ -96,7 +96,7 @@ body {
   align-items: center;
  
 }
-.LoadButton{
+.Button{
   margin-top: 10px;
   margin-bottom: 10px;
   color: #FFFFFF;
@@ -107,11 +107,11 @@ body {
 
 
 
-.LoadButton:hover{
+.Button:hover{
   background: #124a83;
   cursor: pointer;
 }
 
-.LoadButton:active {
+.Button:active {
   background: #0b2f52;
 }

@@ -3,15 +3,15 @@ import axios from "axios"
 
 function Main(){
   const [list, setList] = useState([])
-  const [curLimit, setCurLimit] = useState(3)
+  const [count, setCurLimit] = useState(3)
   const [fetching, setFetching] = useState(true)
 
   useEffect(() => {
     if (fetching){
-      axios.get('https://jsonplaceholder.typicode.com/photos?_limit=' + curLimit)
+      axios.get('https://jsonplaceholder.typicode.com/photos?_limit=' + count)
       .then(response => {
         setList(response.data)
-        setCurLimit(curLimit + 3)
+        setCurLimit(count + 3)
         console.log(response.data)
       })
       .finally(() => setFetching(false))
@@ -60,18 +60,17 @@ function Main(){
               )})}
         </div>
               <div className="ButtonWrapper">
-                <div id="loadButton" className="LoadButton">
+                <div id="loadButton" className="Button">
                  ЗАГРУЗИТЬ ЕЩЕ
                 </div>
               </div>
               
               <div className="Page">
-                <span>{Math.floor((curLimit-4)/9)+1}</span>
+                <span>{Math.floor((count-4)/9)+1}</span>
               </div>
         
     </>
     
-   
   );
 }
 export default Main;
