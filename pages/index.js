@@ -1,10 +1,10 @@
-import List from "../components/list"
-import ButtonLoad from "../components/buttonLoad"
 import CardTemplate from "../components/cards/cardTemplate"
-
-export default function Home(){
+import ButtonLoad from "../components/buttonLoad"
+export default function Main(){
   return(
+
     <div>
+    
       <div className="CardsWrapper">
         <CardTemplate/>
         <CardTemplate/>
