@@ -55,11 +55,17 @@ body {
   margin-bottom: 10px;
 }
 
-
+.Like:hover{
+  
+  fill: rgb(105, 39, 39);
+  transform: scale(2);
+  transition: 1s;
+  cursor: pointer;
+}
 
 .hiddenBox{
   position: absolute;
-  transform: scale(2);
+
   margin-left: 10px;
   margin-bottom: 10px;
   opacity: 0;
@@ -68,22 +74,16 @@ body {
 
 .hiddenBox:hover{
   cursor: pointer;
-  transform: scale(2);
-  transition: 2s;
+
+
 }
 .hiddenBox:hover~svg{
-  fill: rgb(105, 39, 39);
-  transform: scale(2);
-  transition: 1s;
+  
+  fill: rgba(105, 39, 39, 0);
+  
 }
 
-.Like:hover{
-  
-  fill: rgb(105, 39, 39);
-  transform: scale(2);
-  transition: 1s;
-  cursor: pointer;
-}
+
 .hiddenBox:checked~svg{
   fill:red;
 }

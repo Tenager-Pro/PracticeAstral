@@ -1,41 +1,56 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import Link from "next/link"
 
 function Main(){
-  const [list, setList] = useState([])
-  const [count, setCurLimit] = useState(3)
-  const [fetching, setFetching] = useState(true)
-
+  const [list, setList] = useState([])//создаем массив
+  const [count, setCurrentString] = useState(3)//кол-во элементов в строке
+  const [fetching, setFetching] = useState(true)//флаг на считывание данных с сервера
+  const [totalCount, setTotalCount] =useState(0)//кол-во элементов на сервере максимальное
+  
   useEffect(() => {
+    
     if (fetching){
       axios.get('https://jsonplaceholder.typicode.com/photos?_limit=' + count)
       .then(response => {
         setList(response.data)
-        setCurLimit(count + 3)
-        console.log(response.data)
+        setTotalCount(response.headers['x-total-count'])
+        setCurrentString(count + 3)
+        
       })
       .finally(() => setFetching(false))
     }
   }, [fetching])
 
+  
+  
+  
   useEffect(() => {
+   
     document.getElementById('loadButton').addEventListener('click', buttonHandler)
+ 
     document.addEventListener('scroll', scroolHandler)
     return function (){
-      document.getElementById('loadButton').removeEventListener('click', buttonHandler)
+      document.removeEventListener('click', buttonHandler)
       document.removeEventListener('scroll', scroolHandler)
     };
   }, [])
 
 
   const scroolHandler = (e) =>{
-    if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop+window.innerHeight)<100){
+    
+    if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop+window.innerHeight)<100 
+    //&& (list.length<totalCount)
+    ){
       setFetching(true)
     }
   }
   
-  const buttonHandler = () =>{
-    setFetching(true)
+  const buttonHandler = (e) =>{
+   
+      setFetching(true)
+    
+    
   }
 
 
@@ -50,6 +65,9 @@ function Main(){
                         Дата добавления:
                         <div className="Date">
                         20 Мая
+                        </div>
+                        <div className="MoreDetailed">
+                        <Link href="/post/"><a>Подробнее</a></Link>
                         </div> 
                     </div>
                     <input className="hiddenBox" type="checkbox" id="button" width="20px"/>
